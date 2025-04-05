@@ -54,9 +54,9 @@
 
 - [**https://market1.haru.company/**](#): PHP와 도커를 활용한 쇼핑몰 사이트
 - [**https://market2.haru.company/**](#): PHP와 도커를 활용한 쇼핑몰 관리자 사이트
-- [**https://market3.haru.company/**](#): Vue를 활용한 쇼핑몰 사이트
-- [**https://market4.haru.company/**](#): Vue를 활용한 쇼핑몰 관리자 사이트
-- [**https://market5.haru.company/**](#): React를 활용한 쇼핑몰 사이트
+- [**https://market3.haru.company/**](#): Vue와 스프링부트를 활용한 쇼핑몰 사이트 (인증과 인가는 스프링 시큐티리 + JWT 토큰)
+- [**https://market4.haru.company/**](#): Vue와 스프링부트를 활용한 쇼핑몰 관리자 사이트 (인증과 인가는 스프링 시큐티리 + JWT 토큰)
+- [**https://market5.haru.company/**](#): React와 스프링부트를 활용한 쇼핑몰 사이트 (인증과 인가는 스프링 시큐티리 + JWT 토큰)
 
 ## 🏅 취득한 자격증 (Certifications)
 다음은 제가 취득한 자격증 목록입니다:
