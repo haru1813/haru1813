@@ -34,13 +34,17 @@
 - **SQL SERVER**
 - **FireBase**
 
-### **서버 (Databases)**
+### **서버 OS (Databases)**
 - **우분투**
 - **록키 리눅스**
+
+### **웹서버 (Web Server)**
+- **NGINX**
 
 ### **DevOps (DevOps)**
 - **도커**
 - **깃**
+- **레드마인**
 
 ### **Game (Game)**
 - **유니티**
