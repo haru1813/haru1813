@@ -64,7 +64,7 @@
 
 ## 📌 연락처
 - **이메일**: [haru1813@naver.com](mailto:haru1813@naver.com)
-- **GitHub**: [GitHub 프로필 링크]([https://github.com/haru1813](https://github.com/haru1813))
+- **GitHub**: [https://github.com/haru1813]([https://github.com/haru1813](https://github.com/haru1813))
 
 ---
 
