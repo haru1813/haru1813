@@ -11,7 +11,7 @@ You can click the Preview link to take a look at your changes.
 
 <a href="https://github.com/devxb/gitanimals">
 <img
-  src="https://render.gitanimals.org/farms/haru1813"
+  src="https://render.gitanimals.org/farms/haru"
   width="600"
   height="300"
 />
