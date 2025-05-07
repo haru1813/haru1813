@@ -59,8 +59,8 @@ if errorlevel 1 (
 
 echo 완료.
 
-REM 1분 대기 후 다시 실행
-timeout /t 60 /nobreak > nul
+REM 1초 대기 후 다시 실행
+timeout /t 1 /nobreak > nul
 goto loop
 
 :end
