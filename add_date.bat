@@ -1,10 +1,12 @@
 @echo off
 setlocal enabledelayedexpansion
 
-REM 시작 날짜 고정 (2024년 1월 1일 00:00:00)
-set "year=2024"
-set "month=01"
-set "day=01"
+REM 현재 날짜 및 시간 가져오기
+for /f "tokens=1-4 delims=/ " %%a in ("%date%") do (
+    set year=%%a
+    set month=%%b
+    set day=%%c
+)
 
 for /f "tokens=1-3 delims=:." %%h in ("%time%") do (
     set hour=%%h
