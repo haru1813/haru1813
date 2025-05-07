@@ -1,5 +1,5 @@
 @echo off
-setlocal
+setlocal enabledelayedexpansion
 
 REM 현재 날짜 및 시간 가져오기
 for /f "tokens=1-4 delims=/ " %%a in ("%date%") do (
@@ -29,19 +29,25 @@ echo Git add 시작...
 git add .
 if errorlevel 1 (
     echo 오류: git add 실패
-    goto :eof
+) else (
+    echo Git add 성공
 )
+
 echo Git commit 시작...
 git commit -m "memo.txt 업데이트: %currentDate%"
 if errorlevel 1 (
     echo 오류: git commit 실패
-    goto :eof
+) else (
+    echo Git commit 성공
 )
+
+REM Git push -v로 verbose 모드 활성화
 echo Git push 시작...
-git push origin main
+git push -v origin main
 if errorlevel 1 (
     echo 오류: git push 실패
-    goto :eof
+) else (
+    echo Git push 성공
 )
 
 echo 완료.
