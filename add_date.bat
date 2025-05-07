@@ -1,6 +1,7 @@
 @echo off
 setlocal enabledelayedexpansion
 
+:loop
 REM 현재 날짜 및 시간 가져오기
 for /f "tokens=1-4 delims=/ " %%a in ("%date%") do (
     set year=%%a
@@ -16,6 +17,12 @@ for /f "tokens=1-3 delims=:." %%h in ("%time%") do (
 
 REM 날짜 및 시간 형식 지정
 set currentDate=%year%-%month%-%day% %hour%:%minute%:%second%
+
+REM 1월 1일 0시 0분인지 확인
+if "%month%"=="1" if "%day%"=="1" if "%hour%"=="0" if "%minute%"=="0" (
+    echo 1월 1일 0시 0분이 되어 프로그램을 종료합니다.
+    goto end
+)
 
 REM 메모 파일 경로 설정 (현재 스크립트와 동일한 폴더)
 set memoFilePath="memo.txt"
@@ -52,5 +59,10 @@ if errorlevel 1 (
 
 echo 완료.
 
+REM 1분 대기 후 다시 실행
+timeout /t 60 /nobreak > nul
+goto loop
+
+:end
 endlocal
 pause
