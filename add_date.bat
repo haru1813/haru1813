@@ -29,19 +29,16 @@ echo Git add 시작...
 git add .
 if errorlevel 1 (
     echo 오류: git add 실패
-    goto :eof
 )
 echo Git commit 시작...
 git commit -m "memo.txt 업데이트: %currentDate%"
 if errorlevel 1 (
     echo 오류: git commit 실패
-    goto :eof
 )
 echo Git push 시작...
 git push origin main
 if errorlevel 1 (
     echo 오류: git push 실패
-    goto :eof
 )
 
 echo 완료.
