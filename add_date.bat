@@ -1,44 +1,27 @@
 @echo off
-setlocal
+setlocal enabledelayedexpansion
 
-REM 현재 날짜 및 시간 가져오기
-for /f "tokens=1-4 delims=/ " %%a in ("%date%") do (
-    set year=%%a
-    set month=%%b
-    set day=%%c
+REM ▒ 기준 날짜: 2024-01-01 00:00
+set "startYYYY=2024"
+set "startMM=01"
+set "startDD=01"
+set "startHH=00"
+set "startMMin=00"
+set "startSS=00"
+
+REM ▒ 오늘 날짜 00:00 (YYYY-MM-DD 00:00)
+for /f "tokens=1-3 delims=-" %%a in ('powershell -Command "Get-Date -Format 'yyyy-MM-dd'"') do (
+    set "todayYYYY=%%a"
+    set "todayMM=%%b"
+    set "todayDD=%%c"
 )
+set "todayHH=00"
+set "todayMMin=00"
+set "todaySS=00"
 
-for /f "tokens=1-3 delims=:." %%h in ("%time%") do (
-    set hour=%%h
-    set minute=%%i
-    set second=%%j
-)
+REM 출력 테스트
+echo 시작일: %startYYYY%-%startMM%-%startDD% %startHH%:%startMMin%:%startSS%
+echo 오늘일: %todayYYYY%-%todayMM%-%todayDD% %todayHH%:%todayMMin%:%todaySS%
 
-REM 날짜 및 시간 형식 지정
-set currentDate=%year%-%month%-%day% %hour%:%minute%:%second%
-
-REM 메모 파일 경로 설정 (현재 스크립트와 동일한 폴더)
-set memoFilePath="memo.txt"
-
-REM 파일에 현재 날짜 및 시간 추가 (줄 바꿈 포함)
-echo %currentDate%>>"%memoFilePath%"
-echo.
-
-REM Git 명령어 실행
-echo Git add 시작...
-git add .
-if errorlevel 1 (
-    echo 오류: git add 실패
-)
-echo Git commit 시작...
-git commit -m "memo.txt 업데이트: %currentDate%"
-if errorlevel 1 (
-    echo 오류: git commit 실패
-)
-echo Git push 시작...
-git push origin main
-if errorlevel 1 (
-    echo 오류: git push 실패
-)
-
-echo 완료.
+endlocal
+pause
