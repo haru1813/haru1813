@@ -1,7 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
 
-:loop
 REM 현재 날짜 및 시간 가져오기
 for /f "tokens=1-4 delims=/ " %%a in ("%date%") do (
     set year=%%a
@@ -15,6 +14,7 @@ for /f "tokens=1-3 delims=:." %%h in ("%time%") do (
     set second=%%j
 )
 
+:loop
 REM 날짜 및 시간 형식 지정
 set currentDate=%year%-%month%-%day% %hour%:%minute%:%second%
 
@@ -58,6 +58,32 @@ if errorlevel 1 (
 )
 
 echo 완료.
+
+REM 날짜 감소
+set /a "day-=1"
+if %day% lss 1 (
+    set /a "month-=1"
+    if %month% lss 1 (
+        set /a "year-=1"
+        set month=12
+    )
+    if %month%==1 set day=31
+    if %month%==2 (
+        set /a "leap=year%%4"
+        if %leap%==0 set day=29
+        if %leap% neq 0 set day=28
+    )
+    if %month%==3 set day=31
+    if %month%==4 set day=30
+    if %month%==5 set day=31
+    if %month%==6 set day=30
+    if %month%==7 set day=31
+    if %month%==8 set day=31
+    if %month%==9 set day=30
+    if %month%==10 set day=31
+    if %month%==11 set day=30
+    if %month%==12 set day=31
+)
 
 REM 1초 대기 후 다시 실행
 timeout /t 1 /nobreak > nul
