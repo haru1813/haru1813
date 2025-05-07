@@ -43,7 +43,7 @@ if errorlevel 1 (
 
 REM Git push -v로 verbose 모드 활성화
 echo Git push 시작...
-git push -v origin main
+git push -v origin master
 if errorlevel 1 (
     echo 오류: git push 실패
 ) else (
