@@ -45,5 +45,3 @@ if errorlevel 1 (
 )
 
 echo 완료.
-
-endlocal
