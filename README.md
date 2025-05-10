@@ -96,6 +96,8 @@
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=haru1813&layout=compact&theme=vue-dark) 
 
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=haru1813&layout=compact)
+
 <p align="center" style="margin: 0px; padding: 0px;width: 100%;">
 <a href="https://github.com/devxb/gitanimals">
 <img
