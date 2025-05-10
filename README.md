@@ -64,20 +64,37 @@
 ## 🌐 프로젝트
 저는 다양한 프로젝트를 진행하며 기술력을 쌓아왔습니다. 아래는 몇 가지 주요 프로젝트입니다.
 
-- [PHP + Docker 기반 쇼핑몰 사이트](https://market1.haru.company/)
-- PHP와 Docker를 활용하여 구현한 일반 사용자용 쇼핑몰 웹사이트입니다.
+## 🔹 [PHP + Docker 기반 쇼핑몰 사이트](https://market1.haru.company/)  
+**설명:**  
+PHP와 Docker를 활용하여 구현한 **일반 사용자용 쇼핑몰 웹사이트**입니다.
 
-- [PHP + Docker 기반 쇼핑몰 관리자 사이트](https://market2.haru.company/)
-- PHP와 Docker를 사용한 쇼핑몰의 관리자용 웹사이트로, 상품 관리, 주문 관리 등의 기능을 포함합니다.
+---
 
-- [Vue + Spring Boot 쇼핑몰 사이트 (JWT 인증)](https://market3.haru.company/)
-- 프론트엔드는 Vue, 백엔드는 Spring Boot로 구성되었으며, 인증/인가는 Spring Security + JWT 토큰 기반으로 처리됩니다.
+## 🔹 [PHP + Docker 기반 쇼핑몰 관리자 사이트](https://market2.haru.company/)  
+**설명:**  
+PHP와 Docker를 사용한 **쇼핑몰 관리자용 웹사이트**로, **상품 관리**, **주문 관리** 등의 기능을 포함합니다.
 
-- [Vue + Spring Boot 관리자 사이트 (JWT 인증)](https://market4.haru.company/)
-- 쇼핑몰 관리자 전용 사이트로, Vue + Spring Boot 기술스택 기반이며, JWT 인증/인가를 사용합니다.
+---
 
-- [React + Spring Boot 쇼핑몰 사이트 (JWT 인증)](https://market5.haru.company/)
-- 프론트엔드는 React, 백엔드는 Spring Boot 기반이며, Spring Security + JWT 방식으로 인증/인가를 구현한 사용자용 쇼핑몰 사이트입니다.
+## 🔹 [Vue + Spring Boot 쇼핑몰 사이트 (JWT 인증)](https://market3.haru.company/)  
+**설명:**  
+프론트엔드는 **Vue**, 백엔드는 **Spring Boot**로 구성되었으며, **인증과 인가는 Spring Security + JWT 토큰** 기반으로 처리됩니다.
+
+---
+
+## 🔹 [Vue + Spring Boot 관리자 사이트 (JWT 인증)](https://market4.haru.company/)  
+**설명:**  
+**쇼핑몰 관리자 전용 사이트**로, **Vue + Spring Boot** 기술스택 기반이며, **JWT 인증/인가**를 사용합니다.
+
+---
+
+## 🔹 [React + Spring Boot 쇼핑몰 사이트 (JWT 인증)](https://market5.haru.company/)  
+**설명:**  
+프론트엔드는 **React**, 백엔드는 **Spring Boot** 기반이며, **Spring Security + JWT 방식**으로 인증/인가를 구현한 **사용자용 쇼핑몰 사이트**입니다.
+
+---
+
+### 💡 각 프로젝트를 클릭하여 확인해 보세요!
 
 ## 🏅 취득한 자격증 (Certifications)
 다음은 제가 취득한 자격증 목록입니다:
