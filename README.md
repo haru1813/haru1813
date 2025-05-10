@@ -94,6 +94,8 @@
 
 저는 계속해서 더 많은 기술을 배우고 있으며, 다양한 프로젝트를 통해 발전하고 있습니다. 감사합니다! 🙏
 
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=haru1813&layout=compact&theme=vue-dark) 
+
 <p align="center" style="margin: 0px; padding: 0px;width: 100%;">
 <a href="https://github.com/devxb/gitanimals">
 <img
