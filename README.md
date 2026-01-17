@@ -61,13 +61,6 @@
 ### 🎮 Game
 ![Unity](https://img.shields.io/badge/Unity-FFFFFF?style=for-the-badge&logo=unity&logoColor=black)
 
-## 🌐 프로젝트
-저는 다양한 프로젝트를 진행하며 기술력을 쌓아왔습니다. 아래는 몇 가지 주요 프로젝트입니다.
-
----
-
-### 💡 각 프로젝트를 클릭하여 확인해 보세요!
-
 ## 🏅 취득한 자격증 (Certifications)
 다음은 제가 취득한 자격증 목록입니다:
 
