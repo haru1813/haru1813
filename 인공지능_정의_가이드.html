@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>인공지능·머신러닝·딥러닝 정의 가이드</title>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a2332;
+      --border: #2d3a4d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #58a6ff;
+      --accent2: #7ee787;
+      --warning: #d29922;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', 'Malgun Gothic', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+    h1 {
+      font-size: 1.75rem;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 0.5rem;
+      margin-top: 2.5rem;
+    }
+    h1:first-of-type { margin-top: 0; }
+    h2 {
+      font-size: 1.25rem;
+      color: var(--accent2);
+      margin-top: 2rem;
+    }
+    h3 { font-size: 1.05rem; margin-top: 1.5rem; color: var(--accent); }
+    p { margin: 0.75rem 0; color: var(--text); }
+    .def { background: var(--surface); border-left: 4px solid var(--accent); padding: 1rem 1.25rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      background: var(--surface);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+    th { background: var(--border); color: var(--accent2); font-weight: 600; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: rgba(88, 166, 255, 0.06); }
+    .model-name { font-weight: 600; color: var(--accent); }
+    ul { margin: 0.5rem 0; padding-left: 1.5rem; }
+    li { margin: 0.35rem 0; }
+    .toc {
+      background: var(--surface);
+      padding: 1.25rem 1.5rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+    }
+    .toc a { color: var(--accent); text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .toc ul { list-style: none; padding-left: 0; }
+    .toc li { margin: 0.5rem 0; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+  <h1>인공지능·머신러닝·딥러닝 정의 가이드</h1>
+  <p>인공지능(AI), 머신러닝(ML), 딥러닝(DL) 및 관련 모델들의 정의와 실생활에서의 활용을 정리한 문서입니다.</p>
+
+  <nav class="toc">
+    <h2>목차</h2>
+    <ul>
+      <li><a href="#ai">1. 인공지능의 정의</a></li>
+      <li><a href="#weak-strong">2. 약인공지능과 강인공지능</a></li>
+      <li><a href="#ml">3. 머신러닝의 정의</a></li>
+      <li><a href="#supervised">4. 지도 학습</a></li>
+      <li><a href="#unsupervised">5. 비지도 학습</a></li>
+      <li><a href="#reinforcement">6. 강화 학습</a></li>
+      <li><a href="#dl">7. 딥러닝의 정의</a></li>
+      <li><a href="#llm">8. 언어 모델 (LLM)</a></li>
+      <li><a href="#vision">9. 이미지 생성·인식 모델 (Vision)</a></li>
+      <li><a href="#audio-multimodal">10. 오디오·다목적 모델</a></li>
+    </ul>
+  </nav>
+
+  <!-- 1. 인공지능 -->
+  <h1 id="ai">1. 인공지능(Artificial Intelligence)의 정의</h1>
+  <div class="def">
+    <p><strong>인공지능(AI)</strong>은 인간의 지능(학습, 추론, 문제 해결, 인지 등)을 기계가 모방하도록 만든 기술·시스템을 말합니다. 컴퓨터가 데이터를 분석하고 규칙을 학습하여 사람의 개입 없이 판단·예측·행동을 수행할 수 있게 합니다.</p>
+  </div>
+
+  <!-- 2. 약인공지능 vs 강인공지능 -->
+  <h1 id="weak-strong">2. 약인공지능과 강인공지능</h1>
+  <h2>약인공지능(Weak AI / Narrow AI)</h2>
+  <div class="def">
+    <p>특정 과제에만 특화된 인공지능입니다. 정해진 영역(음성 인식, 번역, 추천, 게임 등)에서만 인간 수준 이상의 성능을 보이지만, 그 영역 밖의 문제는 해결하지 못합니다. 현재 우리가 접하는 대부분의 AI(챗봇, 자율주행 보조, 검색·추천 엔진 등)는 약인공지능에 해당합니다.</p>
+  </div>
+  <h2>강인공지능(Strong AI / AGI)</h2>
+  <div class="def">
+    <p>범용 인공지능(AGI, Artificial General Intelligence)이라고도 합니다. 인간처럼 다양한 영역에서 학습·추론·일반화가 가능한 이론적 수준의 AI입니다. 아직 실현되지 않았으며, 연구·논의 단계에 있습니다.</p>
+  </div>
+
+  <!-- 3. 머신러닝 -->
+  <h1 id="ml">3. 머신러닝(Machine Learning)의 정의</h1>
+  <div class="def">
+    <p><strong>머신러닝(ML)</strong>은 데이터에서 패턴을 학습하여 예측·분류·의사결정을 수행하는 AI의 한 분야입니다. 명시적으로 프로그래밍하지 않고, 경험(데이터)을 통해 성능이 개선됩니다. 크게 <strong>지도 학습</strong>, <strong>비지도 학습</strong>, <strong>강화 학습</strong>으로 나뉩니다.</p>
+  </div>
+
+  <!-- 4. 지도 학습 -->
+  <h1 id="supervised">4. 머신러닝 지도 학습(Supervised Learning)</h1>
+  <div class="def">
+    <p><strong>지도 학습</strong>은 정답(레이블)이 있는 데이터로 모델을 학습시키는 방식입니다. 입력(X)과 정답(Y) 쌍을 주고, 입력으로부터 정답을 예측하도록 학습합니다. <strong>분류</strong>(이미지/텍스트 분류, 스팸 탐지 등)와 <strong>회귀</strong>(가격·수요 예측 등)에 널리 쓰입니다.</p>
+  </div>
+  <h2>오픈소스 지도 학습 모델·라이브러리</h2>
+  <table>
+    <thead>
+      <tr><th>모델/라이브러리</th><th>정의</th><th>실생활에서의 활용</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="model-name">scikit-learn</td>
+        <td>Python 기반 머신러닝 라이브러리. 분류·회귀·클러스터링·차원축소 등 다양한 알고리즘 제공.</td>
+        <td>이메일 스팸/정상 메일 구분, 부동산·주가 예측, 설문·선호도 분석, 시험 합격 여부 예측 등 일상적인 분류·예측에 활용.</td>
+      </tr>
+      <tr>
+        <td class="model-name">XGBoost</td>
+        <td>그래디언트 부스팅 기반의 트리 앙상블 모델. 정확도와 속도가 뛰어남.</td>
+        <td>쇼핑몰·OTT에서 '이 상품/영화를 좋아할 만한 사람' 추천, 검색 결과 순위 정렬, 신용카드 부정 결제 탐지, 주택·물가 예측.</td>
+      </tr>
+      <tr>
+        <td class="model-name">LightGBM</td>
+        <td>Microsoft의 그래디언트 부스팅. 리프 위주 성장으로 대용량·고차원 데이터에 유리.</td>
+        <td>네이버·구글 검색 결과 순서, 배너 광고 클릭률 예측, 대출·보험 심사, 온라인 쇼핑 재고·수요 예측.</td>
+      </tr>
+      <tr>
+        <td class="model-name">CatBoost</td>
+        <td>Yandex의 그래디언트 부스팅. 범주형 변수 처리에 강점.</td>
+        <td>나이·성별·지역·취미처럼 카테고리 데이터가 많은 설문·앱 사용 예측, 광고 클릭 여부 예측, 맞춤 추천.</td>
+      </tr>
+      <tr>
+        <td class="model-name">LIBSVM / scikit-learn SVM</td>
+        <td>서포트 벡터 머신. 결정 경계를 최대 마진으로 학습.</td>
+        <td>손글씨·사진 분류(숫자 인식 등), 리뷰 긍정/부정 판별, 이상한 거래·로그 탐지 등 데이터가 많지 않을 때 활용.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 5. 비지도 학습 -->
+  <h1 id="unsupervised">5. 머신러닝 비지도 학습(Unsupervised Learning)</h1>
+  <div class="def">
+    <p><strong>비지도 학습</strong>은 정답 레이블 없이 데이터의 구조·패턴·그룹을 찾는 방식입니다. 클러스터링(그룹화), 차원 축소, 이상 탐지, 연관 규칙 학습 등에 사용됩니다.</p>
+  </div>
+  <h2>오픈소스 비지도 학습 모델·라이브러리</h2>
+  <table>
+    <thead>
+      <tr><th>모델/라이브러리</th><th>정의</th><th>실생활에서의 활용</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="model-name">K-Means (scikit-learn)</td>
+        <td>데이터를 K개의 중심(클러스터)으로 나누는 클러스터링 알고리즘.</td>
+        <td>쇼핑몰·뱅크에서 '비슷한 고객 그룹' 나누기(맞춤 혜택), 사진 색을 줄여 용량 줄이기, 뉴스·블로그 주제별 묶기.</td>
+      </tr>
+      <tr>
+        <td class="model-name">DBSCAN (scikit-learn)</td>
+        <td>밀도 기반 클러스터링. 형태가 자유롭고 이상치를 자동으로 제외.</td>
+        <td>이상 거래·이상 로그인 탐지, 지도상 지역별 특성 그룹화, 형태가 제각각인 데이터(고객·상품) 묶기.</td>
+      </tr>
+      <tr>
+        <td class="model-name">PCA (scikit-learn)</td>
+        <td>주성분 분석. 상관된 변수를 비상관 주성분으로 축소.</td>
+        <td>설문·데이터 항목 수 줄이기, 그래프로 한눈에 보기, 노이즈가 섞인 신호·데이터 정리.</td>
+      </tr>
+      <tr>
+        <td class="model-name">t-SNE / UMAP</td>
+        <td>고차원 데이터를 2·3차원으로 축소해 시각화에 적합하게 만드는 기법.</td>
+        <td>단어·문서·고객 데이터를 2D·3D 그래프로 그려 패턴·그룹을 눈으로 확인, 데이터 탐색용 시각화.</td>
+      </tr>
+      <tr>
+        <td class="model-name">Autoencoder (PyTorch/TensorFlow)</td>
+        <td>입력을 압축(인코딩) 후 복원(디코딩)하도록 학습하는 신경망. 잠재 표현 학습.</td>
+        <td>데이터 압축·요약, 이상 패턴(부정 거래 등) 찾기, 흐린·노이즈 사진 복원, 얼굴·이미지 생성 기반 기술.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 6. 강화 학습 -->
+  <h1 id="reinforcement">6. 머신러닝 강화 학습(Reinforcement Learning)</h1>
+  <div class="def">
+    <p><strong>강화 학습(RL)</strong>은 에이전트가 환경과 상호작용하며 보상(reward)을 최대화하도록 행동을 학습하는 방식입니다. 정답 레이블 대신 보상 신호만 사용하며, 게임·로봇 제어·자율주행·추천 등 순차적 의사결정에 적합합니다.</p>
+  </div>
+  <h2>오픈소스 강화 학습 모델·프레임워크</h2>
+  <table>
+    <thead>
+      <tr><th>모델/프레임워크</th><th>정의</th><th>실생활에서의 활용</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="model-name">OpenAI Gym / Gymnasium</td>
+        <td>강화 학습 환경 표준 인터페이스. 다양한 벤치마크 환경 제공.</td>
+        <td>게임 AI·로봇 학습용 시뮬레이션 환경 제공, 대학·연구소에서 강화학습 실습·연구할 때 사용.</td>
+      </tr>
+      <tr>
+        <td class="model-name">Stable-Baselines3</td>
+        <td>PyTorch 기반 RL 알고리즘 모음. PPO, A2C, DQN, SAC 등 구현.</td>
+        <td>게임 캐릭터·봇이 스스로 플레이하게, 청소·배송 로봇 제어, 주식·광고 추천 순서 학습.</td>
+      </tr>
+      <tr>
+        <td class="model-name">DQN (Deep Q-Network)</td>
+        <td>딥러닝으로 Q함수를 근사하는 값 기반 RL. 이산 행동 공간.</td>
+        <td>레트로 게임(팩맨 등)을 AI가 스스로 플레이하게, 단순한 버튼/선택 기반 제어(예: 신호 제어).</td>
+      </tr>
+      <tr>
+        <td class="model-name">PPO (Proximal Policy Optimization)</td>
+        <td>정책 경사 기반 알고리즘. 안정적이고 범용적으로 사용.</td>
+        <td>걷기·잡기 로봇, 게임·시뮬레이션 에이전트, 챗봇이 다음에 무엇을 말할지 결정하는 정책 학습.</td>
+      </tr>
+      <tr>
+        <td class="model-name">SAC (Soft Actor-Critic)</td>
+        <td>연속 행동 공간에 강한 오프폴리시 액터-크리틱 알고리즘.</td>
+        <td>로봇 팔·다리처럼 힘·각도를 연속적으로 조절하는 제어, 시뮬레이션에서 행동을 반복 학습.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 7. 딥러닝 -->
+  <h1 id="dl">7. 딥러닝(Deep Learning)의 정의</h1>
+  <div class="def">
+    <p><strong>딥러닝(DL)</strong>은 여러 층의 인공 신경망(뉴런 계층)을 쌓아 데이터의 고수준 특징을 자동으로 학습하는 머신러닝의 한 분야입니다. CNN(이미지), RNN/Transformer(시퀀스·언어), GAN·Diffusion(생성) 등이 대표적이며, 대량의 데이터와 연산 자원을 활용해 음성·이미지·언어 처리에서 뛰어난 성능을 보입니다.</p>
+  </div>
+
+  <!-- 8. 언어 모델 LLM -->
+  <h1 id="llm">8. 언어 모델 (LLM - Large Language Model, Text)</h1>
+  <p>대규모 텍스트 데이터로 학습한 모델로, 문장 완성·질의응답·번역·요약·코드 생성 등 다양한 텍스트 작업을 수행합니다.</p>
+  <table>
+    <thead>
+      <tr><th>모델</th><th>정의</th><th>실생활에서의 활용</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="model-name">LLaMA (Meta)</td>
+        <td>Meta의 오픈소스 대형 언어 모델. Transformer 기반, 다양한 크기 제공.</td>
+        <td>고객 상담 챗봇, 뉴스·논문 요약, 외국어 번역, 글·코드 자동 작성, 우리 서비스에 맞게 추가 학습한 대화·작문 도구.</td>
+      </tr>
+      <tr>
+        <td class="model-name">Mistral / Mixtral</td>
+        <td>Mistral AI의 효율적 LLM. Mixtral은 MoE(혼합 전문가) 구조.</td>
+        <td>질문하면 문서·DB를 검색해 답하는 AI, 코드·보고서 초안 생성, 회사 서버·PC에 설치해 쓰는 대화형 AI.</td>
+      </tr>
+      <tr>
+        <td class="model-name">Qwen (Alibaba)</td>
+        <td>Alibaba의 다국어·멀티모달 지원 LLM 시리즈.</td>
+        <td>중국어·영어 번역·요약, 코드 자동 작성, '우리 회사 자료 검색해서 답하기' 같은 검색 기반 AI 서비스.</td>
+      </tr>
+      <tr>
+        <td class="model-name">BLOOM (BigScience)</td>
+        <td>다국어(46개 언어)에 초점을 둔 오픈소스 LLM.</td>
+        <td>여러 나라 언어로 챗봇·번역·글쓰기, 학교·연구에서 다국어 AI 실험·교육할 때 사용.</td>
+      </tr>
+      <tr>
+        <td class="model-name">Phi (Microsoft)</td>
+        <td>소규모·고효율 LLM. 적은 파라미터로 높은 성능 목표.</td>
+        <td>스마트폰·태블릿에 설치해 오프라인에서 요약·질의응답, 인터넷·서버 없이 쓰는 가벼운 AI.</td>
+      </tr>
+      <tr>
+        <td class="model-name">Gemma (Google)</td>
+        <td>Google의 오픈소스 경량 LLM. Gemini 기술 기반.</td>
+        <td>일상용 챗봇·개인 비서, 우리 데이터로 추가 학습·문서 검색 연동, 학생·개발자 실습·실험용.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 9. Vision -->
+  <h1 id="vision">9. 이미지 생성·인식 모델 (Vision)</h1>
+  <p>이미지 분류·검출·분할·캡셔닝 등 인식과, 텍스트/이미지로부터 이미지를 생성하는 모델을 포함합니다.</p>
+  <table>
+    <thead>
+      <tr><th>모델</th><th>정의</th><th>실생활에서의 활용</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="model-name">Stable Diffusion (Stability AI)</td>
+        <td>잠공간에서 디퓨전(노이즈 제거) 과정으로 이미지를 생성하는 오픈소스 모델.</td>
+        <td>문장으로 그림 그리기(예: '바다가 보이는 카페'), 사진에서 특정 부분만 수정·지우기, SNS·광고용 이미지·일러스트 제작.</td>
+      </tr>
+      <tr>
+        <td class="model-name">DALL·E (OpenAI)</td>
+        <td>OpenAI의 텍스트→이미지 생성 모델. CLIP + 디퓨전 기반.</td>
+        <td>광고·발표용 이미지 만들기, 아이디어를 바로 그림으로 그려보기. (유료 API·상용 서비스)</td>
+      </tr>
+      <tr>
+        <td class="model-name">CLIP (OpenAI)</td>
+        <td>이미지와 텍스트를 동일 임베딩 공간에 매핑하는 비전-언어 모델.</td>
+        <td>'이 사진과 비슷한 이미지' 검색, 사진을 말로 설명하거나 레이블 없이 분류, 텍스트로 이미지 생성할 때 문장 이해에 사용.</td>
+      </tr>
+      <tr>
+        <td class="model-name">ResNet / Vision Transformer (ViT)</td>
+        <td>이미지 분류용 CNN(ResNet) 및 Transformer(ViT) 구조.</td>
+        <td>사진 속 사물·동물·식품 구분, X레이·제품 불량 검사, 폰 카메라·보안 카메라의 얼굴·객체 인식 기반.</td>
+      </tr>
+      <tr>
+        <td class="model-name">YOLO / DETR</td>
+        <td>실시간 객체 검출 모델(YOLO), Transformer 기반 검출(DETR).</td>
+        <td>실시간으로 '사람·차·물건' 위치 표시 — 자율주행 보조, CCTV 감시, 창고 재고·물류 인식.</td>
+      </tr>
+      <tr>
+        <td class="model-name">Segment Anything (SAM)</td>
+        <td>Meta의 범용 이미지 분할 모델. 프롬프트(점·박스)로 영역 분할.</td>
+        <td>사진에서 '이 사람만' 또는 '이 물체만' 따내기, 의료 영상·위성 사진에서 관심 영역 표시, 자동 배경 제거·포토 편집.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- 10. 오디오·다목적 -->
+  <h1 id="audio-multimodal">10. 오디오 및 다목적 모델</h1>
+  <p>음성 인식·합성·번역, 음악·효과음 생성, 그리고 텍스트·이미지·음성을 함께 다루는 멀티모달 모델을 포함합니다.</p>
+  <table>
+    <thead>
+      <tr><th>모델</th><th>정의</th><th>실생활에서의 활용</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="model-name">Whisper (OpenAI)</td>
+        <td>다국어 음성 인식·번역 오픈소스 모델. 99개 언어 지원.</td>
+        <td>유튜브·영상 자동 자막, 회의·강의·팟캐스트를 글자로 옮기기, 음성 비서·통화 요약.</td>
+      </tr>
+      <tr>
+        <td class="model-name">Bark (Suno)</td>
+        <td>텍스트를 음성·효과음으로 생성하는 오픈소스 TTS.</td>
+        <td>오디오북·강의 내레이션, 챗봇·안내 음성, 게임·영상 더빙·내레이터 음성 생성.</td>
+      </tr>
+      <tr>
+        <td class="model-name">MusicGen / AudioLDM</td>
+        <td>텍스트·멜로디 조건으로 음악·오디오를 생성하는 모델.</td>
+        <td>영상·게임용 BGM, 효과음(발걸음·바람 소리 등) 만들기, 유튜브·광고용 음악·사운드 제작.</td>
+      </tr>
+      <tr>
+        <td class="model-name">LLaVA / Qwen-VL</td>
+        <td>이미지+텍스트를 함께 이해하는 비전-언어(VL) 멀티모달 LLM.</td>
+        <td>사진을 보여주고 '이게 뭐야?' '설명해줘' 질문하기, PDF·이미지 문서 내용 질의, 사진 기반 챗봇·보조.</td>
+      </tr>
+      <tr>
+        <td class="model-name">GPT-4V / Gemini (Vision)</td>
+        <td>이미지 입력을 처리할 수 있는 상용 멀티모달 LLM.</td>
+        <td>사진·도면 보여주고 질문·요약, 메뉴·영수증 촬영 후 분석, 코딩·설계 보조. (유료 API·상용)</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <footer>
+    <p>본 문서는 인공지능·머신러닝·딥러닝 및 관련 오픈소스·상용 모델의 정의와 실생활 활용을 요약한 참고 자료입니다. 모델 버전과 라이선스는 공식 사이트를 확인하세요.</p>
+  </footer>
+
+</body>
+</html>
